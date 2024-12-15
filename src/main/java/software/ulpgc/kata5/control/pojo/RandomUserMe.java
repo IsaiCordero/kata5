@@ -22,7 +22,7 @@ public class RandomUserMe {
         return picture;
     }
 
-    public record Name(String title, String first, String last){}
+    public record Name(String title, String first, String last) {}
 
-    public record Picture(String large, String medium, String thumbnail){}
+    public record Picture(String large, String medium, String thumbnail) {}
 }

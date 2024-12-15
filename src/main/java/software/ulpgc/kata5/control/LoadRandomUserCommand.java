@@ -8,6 +8,7 @@ import java.util.List;
 
 public class LoadRandomUserCommand implements Command {
     private final int count;
+
     private final List<User> users = new ArrayList<>();
 
     public LoadRandomUserCommand(int count) {
@@ -20,7 +21,7 @@ public class LoadRandomUserCommand implements Command {
         RandomUserMeProvider provider = new RandomUserMeProvider();
         for (int i = 0; i < count; i++) {
             try {
-                users.add(provider.providerNew());
+                users.add(provider.provideNew());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
